@@ -11,8 +11,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use('/restaurants', restaurants);
-//app.use('/tags', tags);
-//app.use('/cities', cities);
+app.use('/tags', tags);
+app.use('/cities', cities);
 
 app.get('/', (req, res) => res.json({success: 'true'}));
 

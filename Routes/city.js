@@ -10,10 +10,10 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-const { id }  =   req.params.id
-
+const { id }  =   req.params;
+;
 client
-.query("SELECT * FROM city WHERE id=$1;",[id])
+.query("SELECT * FROM city WHERE id=$1;", [id])
 .then ((data) => res.json(data))
 .catch ((err) => res.send(err))
 
@@ -22,10 +22,10 @@ client
 
 router.post('/', (req, res) =>{
 
-const { name } = req.body 
+const { name } = req.body; 
 
 client
-.query("INSERT INTO city(name) VALUES($1);",[name])
+.query("INSERT INTO city (name) VALUES($1);", [name])
 .then((data) => res.json(data))
 .catch((err) => res.json(err))
 })

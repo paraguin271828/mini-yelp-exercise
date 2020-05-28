@@ -8,4 +8,5 @@ An example .env file is provided to create the needed variables for the database
 Technology stack:
 * Node.js
 * Express
+* DotEnv
 * PostgreSQL
